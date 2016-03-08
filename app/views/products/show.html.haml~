@@ -1,0 +1,20 @@
+%p#notice= notice
+
+ 
+%h1= @product.name
+%p= number_to_currency @product.price
+%p= image_tag @product.image, height: "300%"
+
+%p=link_to "Add bike for booking", add_cart_path, method: :post, class: "btn btn-primary"
+ 
+%p
+  %b Description:
+  = @product.description
+%p
+  %b Brand:
+  = @product.brand
+
+-if current_user && current_user.admin?
+  = link_to 'Edit', edit_product_path(@product)
+\|
+  = link_to 'Back', products_path

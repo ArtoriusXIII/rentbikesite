@@ -1,0 +1,63 @@
+= form_for @product, multipart: true  do |f|
+  - if @product.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@product.errors.count, "error")} prohibited this product from being saved:"
+      %ul
+        - @product.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :price
+    = f.text_field :price
+  .field
+    = f.label :image
+    = f.file_field :image
+  .field
+    = f.label :description
+    = f.text_field :description
+  .field
+    = f.label :brand
+    = f.text_field :brand
+  .actions
+    = f.submit 'Save'
+
+<div id="tertiary" class="sidebar-container" role="complementary">
+		<div class="sidebar-inner">
+			<div class="widget-area" id="sidebar-widgets">
+				<aside id="text-6" class="widget widget_text"><h3 class="widget-title">Our Prices</h3>			<div class="textwidget"><strong>Standard Bikes</strong>
+1 hr – €5<br>
+3 hours – €10<br>
+Full Day – €15<br><br>
+<strong>Tandem &amp; Electric Bikes</strong><br>
+€10 for 1 hour<br>
+€20 for 3 hours<br>
+€30 for full Day<br><br>
+<strong>Carry Along for Kids</strong><br>
+From €2.50 for Child’s Seat<br><br>
+<strong>Trailers (Fits up to 2 kids)</strong><br>
+From €10</div>
+		</aside><aside id="juiz_last_tweet_widget-2" class="widget juiz_last_tweet_widget">
+				<div class="juiz_last_tweet_inside juiz_ltw_user_BikesInThePark">
+					<ul class="juiz_last_tweet_tweetlist">
+						
+								<li class="juiz_last_tweet_item jltw_item_alone">
+									
+									<span class="juiz_lt_content">Great interview by <a href="http://twitter.com/Tweetinggoddess" class="juiz_last_tweet_tweetos" rel="nofollow" target="_self">@Tweetinggoddess</a> on TV3 can't wait to get involved in <a href="http://twitter.com/SMSummitIRL" class="juiz_last_tweet_tweetos" rel="nofollow" target="_self">@SMSummitIRL</a> <a href="http://twitter.com/search/?src=hash&amp;q=%23SMSSummitIRL" class="juiz_last_tweet_hastag" rel="nofollow" target="_self">#SMSSummitIRL</a></span>
+									<span class="juiz_last_tweet_footer_item">
+										<em class="juiz_last_tweet_inner juiz_last_tweet_metadata">Time ago <a href="http://twitter.com/BikesInThePark/status/702578094507499520" target="_self" title="See the status">2 Days</a> <span class="juiz_ltw_source">via <a href="http://twitter.com/download/iphone" rel="nofollow">Twitter for iPhone</a></span></em>
+										
+									</span>
+								</li>
+							
+					</ul>
+					<p class="juiz_last_tweet_follow_us">
+						<span class="juiz_ltw_follow">Follow</span>
+						<a class="juiz_ltw_username" href="http://twitter.com/BikesInThePark">@BikesInThePark</a>
+						<span class="juiz_ltw_ontwitter">on twitter.</span>
+					</p>
+				</div></aside>			</div><!-- .widget-area -->
+		</div><!-- .sidebar-inner -->
+	</div>
